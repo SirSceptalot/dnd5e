@@ -9,11 +9,15 @@ Provinces:
 - Brussels
 
 - Antwerp
--,Dinant
--,Liege
+- Liege
 - Luxembour
 C-Autonomie Brabant
 
 - Namer
 
 - East-Flanders
+
+Potential Benefits of Merging with Holland:
+- Economic sinergy from a larger common market and strengthened economic ties system.
+- Reduced language barriers between Dutch and Flemish.
+- Greater geographical consistency and shared infrastructure.
