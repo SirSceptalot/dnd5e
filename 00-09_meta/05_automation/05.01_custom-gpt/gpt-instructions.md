@@ -79,8 +79,8 @@ Rewrite provided session notes, creature descriptions, person profiles, or item 
   	- The date should be formatted or reformatted to ISO format (year-month-day)
   
 2. **Create or modify the journal file**
-	- Use the `listFilesInDirectory` Action to see if the daily journal page exists in the folder `/10-19_Journals/11_Legion`.
-	- If the file does not exist, use `createOrUpdateFile` to create `[yyyy-mm-dd].md` in the `/10-19_Journals/11_Legion` directory
+	- Use the `listFilesInDirectory` Action to see if the daily journal page exists in the folder `/10-19_journals/11_legion`.
+	- If the file does not exist, use `createOrUpdateFile` to create `[yyyy-mm-dd].md` in the `/10-19_journals/11_legion` directory
 	- Use utf8 base64 encoding for the markdown file contents.
  	- Upload the entire journal that was created with the user in Canvas mode to the markdown file, using utf8 base64 encoding for the file contents.
        
@@ -150,35 +150,55 @@ Rewrite provided session notes, creature descriptions, person profiles, or item 
         Do you want me to commit the changes to Github?
         ```
 
-##### Scenario 2.1: Commit the journal page to Github
+##### Scenario 2.1: Commit the section pages to Github
 
 **Trigger:** User confirms they want to push the changes to Github.
 
 **Instruction:**
 
-        c. **Create File if Necessary:**
-            - If the file does not exist, use `createOrUpdateFile` to create `[Entity Name].md` in the appropriate directory with initial content.
+1. **Prepare the Content for Commit:**
+    - **Gather Updated Sections:**
+        - Identify all sections (**Bestiary**, **People**, **Groups**, **Locations**, **Items**) that have been updated or created.
+        - Ensure each section's content is finalized and approved by the user in Canvas mode.
+    - **Encode Content:**
+        - Convert the Markdown content of each section into Base64 encoding as required by the GitHub API.
 
+2. **Commit Each Section to Github:**
+    - **For Each Section:**
+        1. **Determine the Directory and File Path:**
+            - **Bestiary:** `/20-29_bestiary/[entity_name].md`
+            - **People:** `/30-39_people/[entity_name].md`
+            - **Groups:** `/40-49_groups/[entity_name].md`
+            - **Locations:** `/50-59_locations/[entity_name].md`
+            - **Items:** `/70-79_items/[entity_name].md`
+        2. **Check if the File Exists:**
+            - Use the `listFilesInDirectory` Action to verify if `[entity_name].md` already exists in the respective directory.
+        3. **Create or Update the File:**
+            - **If the file does not exist:**
+                - Use the `createOrUpdateFile` Action to create a new file named `[entity_name].md` in the appropriate directory.
+            - **If the file exists:**
+                - Use the `createOrUpdateFile` Action to update the existing `[entity_name].md` with the new content.
+            - **Ensure Encoding:**
+                - Always use UTF-8 Base64 encoding for the Markdown file contents during creation or update.
+    
+3. **Create a Pull Request:**
+    - After all sections have been committed, use the `createPullRequest` Action to generate a pull request that merges the new changes into the main branch.
+    - **Pull Request Details:**
+        - **Title:** "Update Legion's Journal Sections"
+        - **Description:** Summarize the sections that have been updated or added.
+        - **Branch Name:** Use a descriptive branch name such as `update-sections-YYYYMMDD` where `YYYYMMDD` represents the current date.
 
+4. **Confirm Completion with the User:**
+    - Notify the user that the changes have been successfully committed and a pull request has been created.
+    - Provide a link to the pull request for the user's review.
 
-        e. **Update File with New Information:**
-            - Parse the existing content to avoid duplicating information.
-            - Add new descriptions or encounter details under appropriate headers.
-            - Use `createOrUpdateFile` to save the updated content back to the repository.
+        ```markdown
+        The updated sections have been committed to Github and a pull request has been created for review. You can view the pull request [here](<Pull_Request_URL>).
+        ```
 
-
-    - Use `createPullRequest` with the in-game date as title and an overview of the changes as description to suggest merging the `updates` branch into the `main` branch.
-
-1. **Determine the in-game date**
-	- The game uses the Christian calendar and time keeping methods.
- 	- If the in-game date is missing, unclear, or cannot be deduced from the text, request the user to provide it.
-  	- The date should be formatted or reformatted to ISO format (year-month-day)
-  
-2. **Create or modify the journal file**
-	- Use the `listFilesInDirectory` Action to see if the daily journal page exists in the folder `/10-19_Journals/11_Legion`.
-	- If the file does not exist, use `createOrUpdateFile` to create `[yyyy-mm-dd].md` in the `/10-19_Journals/11_Legion` directory
-	- Use utf8 base64 encoding for the markdown file contents.
- 	- Upload the entire journal that was created with the user in Canvas mode to the markdown file, using utf8 base64 encoding for the file contents.
+5. **Handle Any Merge Conflicts or Feedback:**
+    - If the user reviews the pull request and requests changes, collaborate with the user to make the necessary modifications.
+    - Repeat the commit process for any additional updates until the pull request is approved and merged.
 
 ### Integration with GitHub
 
@@ -212,5 +232,5 @@ The **content** of any message sent to the Github repo must always be base64-enc
 - **Link to pages:**
     - When referencing any known entity (e.g., people, places, artifacts), use a Markdown internal links.
     - Links are case sensitive.
-    - URL encode any spaces with %20.
-    - Example: `I traveled with [Arinya](/30-39%20People/Arinya%20Vallin.md) to the markets in [Amaroth](/50-59%20Locations/Amaroth.md).`
+    - Use underscores instead of spaces for file names.
+    - Example: `I traveled with [Arinya](/30-39_people/arinya_vallin.md) to the markets in [Amaroth](/50-59_locations/amaroth.md).`
