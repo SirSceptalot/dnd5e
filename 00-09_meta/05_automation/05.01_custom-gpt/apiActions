@@ -1,0 +1,228 @@
+openapi: 3.1.0
+info:
+  title: GitHub Knowledge Base Updater
+  description: Manages Markdown files in a structured directory system for a D&D game repository.
+  version: 1.3.0
+servers:
+  - url: https://api.github.com
+    description: GitHub API Server
+
+paths:
+  /repos/SirSceptalot/dnd5e/contents/{directory}:
+    get:
+      operationId: listFilesInDirectory
+      summary: List files in a directory.
+      parameters:
+        - name: directory
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of files in the directory.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: File or folder name.
+                    path:
+                      type: string
+                      description: Full file path.
+                    sha:
+                      type: string
+                      description: SHA of the file.
+                    type:
+                      type: string
+                      description: "Type of item (file or dir)."
+        '404':
+          description: Directory not found.
+
+  /repos/SirSceptalot/dnd5e/contents/{file_path}:
+    get:
+      operationId: getFileContents
+      summary: Get the content of a specific file.
+      parameters:
+        - name: file_path
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: File content retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  content:
+                    type: string
+                    description: Base64-encoded file content.
+                  sha:
+                    type: string
+                    description: SHA of the current file version.
+        '404':
+          description: File not found.
+
+  /repos/SirSceptalot/dnd5e/git/refs/heads:
+    get:
+      operationId: listBranches
+      summary: List all branches in the repository.
+      responses:
+        '200':
+          description: List of branches.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    ref:
+                      type: string
+                      description: Branch reference name (e.g., `refs/heads/gpt-test`).
+                    object:
+                      type: object
+                      properties:
+                        sha:
+                          type: string
+                          description: SHA of the branch's latest commit.
+        '404':
+          description: Repository not found.
+
+  /repos/SirSceptalot/dnd5e/git/refs:
+    post:
+      operationId: createNewBranch
+      summary: Create a new branch from the latest commit if no other branches exist.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - ref
+                - sha
+              properties:
+                ref:
+                  type: string
+                  description: The name of the new branch (e.g., `refs/heads/new-branch`).
+                sha:
+                  type: string
+                  description: The SHA of the main branch's latest commit.
+      responses:
+        '201':
+          description: New branch created.
+
+  /repos/SirSceptalot/dnd5e/contents/{filename}:
+    put:
+      operationId: createOrUpdateFile
+      summary: Create or update a file in the GitHub repository.
+      description: Creates a new file if it doesn't exist. If the file exists, it updates it using the latest SHA.
+        Always commits to the `updates` branch.
+      parameters:
+        - name: filename
+          in: path
+          required: true
+          description: The full path of the file, including its extension (e.g., `docs/myfile.md`).
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - message
+                - content
+                - branch
+              properties:
+                message:
+                  type: string
+                  description: Commit message for creating or updating the file.
+                  example: "Updated myfile.md with new content."
+                content:
+                  type: string
+                  format: byte
+                  description: Base64-encoded content of the file.
+                  example: "U29tZSB1cGRhdGVkIGNvbnRlbnQ="  # "Some updated content" encoded in Base64
+                sha:
+                  type: string
+                  description: The SHA of the existing file (required for updates). Leave empty for new files.
+                  example: "f9a3c2b12d..."
+                branch:
+                  type: string
+                  description: Name of the branch to commit the file to, value is always `updates`.
+                  example: "updates"
+      responses:
+        '201':
+          description: File created successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  content:
+                    type: object
+                  commit:
+                    type: object
+        '200':
+          description: File updated successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  content:
+                    type: object
+                  commit:
+                    type: object
+        '400':
+          description: Bad request (e.g., invalid input or missing required fields).
+        '401':
+          description: Unauthorized (invalid or missing token).
+        '409':
+          description: Conflict (e.g., outdated SHA when updating).
+
+  /repos/SirSceptalot/dnd5e/pulls:
+    post:
+      operationId: createPullRequest
+      summary: Create a new pull request.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - title
+                - head
+                - base
+                - body
+              properties:
+                title:
+                  type: string
+                  description: The title of the PR.
+                  example: "Added new lore section to the Knowledge Base."
+                head:
+                  type: string
+                  description: The branch where changes were made.
+                  example: "feature/new-lore"
+                base:
+                  type: string
+                  description: The target branch (e.g., main).
+                  example: "main"
+                body:
+                  type: string
+                  description: Description of the changes.
+                  example: "This PR adds a new lore section to the Knowledge Base."
+      responses:
+        '201':
+          description: Pull request created.
