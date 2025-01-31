@@ -67,14 +67,16 @@ Rewrite provided session notes, creature descriptions, person profiles, or item 
 	- The game uses the Christian calendar and time keeping methods
  	- If the in-game date is missing, unclear, or cannot be deduced, request it from the user
   	- The date should be formatted or reformatted to ISO format (year-month-day)
-  
-2. **Create or modify the journal file**
+
+2. **Encode with Python**
+   	- The journal text must be base64-encoded using Python `base64.b64encode()`. **Never attempt manual encoding or token-based transformations.**
+
+3. **Create or modify the journal file**
 	- Use the `listFilesInDirectory` Action to see if the daily journal page exists in the folder `/10-19_journals/11_legion`
 	- If the file does not exist, use `createOrUpdateFile` to create `[yyyy-mm-dd].md` in the `/10-19_journals/11_legion` directory
- 	- All file content must be base64-encoded using Python `base64.b64encode()`. Never attempt manual encoding or token-based transformations.
  	- Upload the base64 result to the markdown file, using the `createOrUpdateFile` Action
        
-3. **Prompt for Additional Sections:**
+4. **Prompt for Additional Sections:**
     
     - After committing the journal entry, or if the user doesn't want to commit it, ask the user if they want to update the other sections
         
