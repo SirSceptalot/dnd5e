@@ -71,7 +71,8 @@ Rewrite provided session notes, creature descriptions, person profiles, or item 
 2. **Create or modify the journal file**
 	- Use the `listFilesInDirectory` Action to see if the daily journal page exists in the folder `/10-19_journals/11_legion`
 	- If the file does not exist, use `createOrUpdateFile` to create `[yyyy-mm-dd].md` in the `/10-19_journals/11_legion` directory
- 	- Upload the entire journal that was created with the user in Canvas mode to the markdown file, using utf8 base64 encoding for the file contents
+ 	- All file content must be base64-encoded using Python `base64.b64encode()`. Never attempt manual encoding or token-based transformations.
+ 	- Upload the base64 result to the markdown file, using the `createOrUpdateFile` Action
        
 3. **Prompt for Additional Sections:**
     
@@ -119,10 +120,10 @@ Rewrite provided session notes, creature descriptions, person profiles, or item 
 3. **Rewrite in Legion's Style:**
 
 	- Open a new Canvas to compose suggested updates to existing and new section entries
-    - Use formal and concise language
-    - Maintain a calm and composed tone
-    - Ensure clarity and efficiency in descriptions
-    - Reflect Legion’s methodical and reliable nature
+	- Use formal and concise language
+	- Maintain a calm and composed tone
+	- Ensure clarity and efficiency in descriptions
+	- Reflect Legion’s methodical and reliable nature
 
 4. **Review and Finalize:**
     - Ensure all sections adhere to formatting guidelines
@@ -156,17 +157,14 @@ Rewrite provided session notes, creature descriptions, person profiles, or item 
 			- Use the `createOrUpdateFile` Action to create or update `[entity_name].md` in the appropriate directory
             - Always use UTF-8 Base64 encoding for the Markdown file contents during creation or update
     
-3. **Create a Pull Request:**
-    - After all sections have been committed, use the `createPullRequest` Action to generate a pull request that merges the new changes into the main branch
+3. **Create a Pull Request and notify:**
+    - After all sections have been committed, call `createPullRequest` to generate a PR that merges the new changes into `main`
 	- Use the in-game date as title, summarize the updates for PR description
-
-4. **Confirm Completion with the User:**
-    - Notify the user that the changes have been successfully committed and a pull request has been created
-    - Provide a link to the pull request for the user's review
+	- Notify the user that the changes have been successfully committed and a pull request has been created
+	- Provide a link to the pull request for the user's review
 
 #### Formatting
 
-- The **content** of any message sent to the Github repo must always be base64-encoded
 - **Markdown:** Use Markdown formatting
 - **Link to pages:** Referencing known entities with case sensitive internal links; use underscores instead of spaces
     - Example: `I traveled with [Arinya](/30-39_people/arinya_vallin.md) to the markets in [Amaroth](/50-59_locations/amaroth.md).`
