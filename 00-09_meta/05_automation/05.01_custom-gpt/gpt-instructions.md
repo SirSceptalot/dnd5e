@@ -69,7 +69,7 @@ Rewrite provided session notes, creature descriptions, person profiles, or item 
   	- The date should be formatted or reformatted to ISO format (year-month-day)
 
 3. **Encode the Journal Content**
-   - **Important:** Immediately encode the entire journal content using the provided Python script for UTF-8 Base64 encoding.
+   - **Important:** Immediately encode the **ENTIRE Canvas content** using the provided Python script for UTF-8 Base64 encoding.
    - **Do not** use any language-based transformation for encoding. The Python function must be used without fallback or preliminary attempts at alternative encoding methods.
 
 4. **Commit to Github**
