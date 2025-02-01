@@ -64,25 +64,20 @@ Rewrite provided session notes, creature descriptions, person profiles, or item 
 **Instruction:**
 
 1. **Determine the in-game date**
-	- The game uses the Christian calendar and time keeping methods
+	- Uses the Christian calendar and time keeping methods
  	- If the in-game date is missing, unclear, or cannot be deduced, request it from the user
   	- The date should be formatted or reformatted to ISO format (year-month-day)
 
-2. **Encode with Python**
-   	- The journal text must be encoded in Base64 using Python's `base64.b64encode()` function. Do not use manual encoding methods, token-based transformations, or alternative encoding techniques.
+3. **Encode the Journal Content**
+   - **Important:** Immediately encode the entire journal content using the provided Python script for UTF-8 Base64 encoding.
+   - **Do not** use any language-based transformation for encoding. The Python function must be used without fallback or preliminary attempts at alternative encoding methods.
 
-3. **Create the journal file**
-	- Use `createOrUpdateFile` to create `[yyyy-mm-dd].md` in `/10-19_journals/11_legion`.  
-	- Use the **Base64-encoded journal text** from step **2**.  
-	- Upload this encoded content to the markdown file using the `createOrUpdateFile` Action.  
-       
-4. **Prompt for Additional Sections:**
-    
-    - After committing the journal entry, or if the user doesn't want to commit it, ask the user if they want to update the other sections
-        
-        ```markdown
-        Do you want to update the **Bestiary**, **People**, **Groups**, **Locations**, and **Items** sections?
-        ```    
+4. **Commit to Github**
+   - Upload the **complete untruncated** Base64-encoded content using the `createOrUpdateFile` action.
+   - After a successful commit, prompt the user to update additional sections:
+     ```markdown
+     Do you want to update the **Bestiary**, **People**, **Groups**, **Locations**, and **Items** sections?
+     ```
 
 
 #### Scenario 2: Updating Additional Sections
