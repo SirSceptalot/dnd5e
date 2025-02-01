@@ -69,12 +69,12 @@ Rewrite provided session notes, creature descriptions, person profiles, or item 
   	- The date should be formatted or reformatted to ISO format (year-month-day)
 
 2. **Encode with Python**
-   	- The journal text must be base64-encoded using Python `base64.b64encode()`. **Never attempt manual encoding or token-based transformations.**
+   	- The journal text must be encoded in Base64 using Python's `base64.b64encode()` function. Do not use manual encoding methods, token-based transformations, or alternative encoding techniques.
 
-3. **Create or modify the journal file**
-	- Use the `listFilesInDirectory` Action to see if the daily journal page exists in the folder `/10-19_journals/11_legion`
-	- If the file does not exist, use `createOrUpdateFile` to create `[yyyy-mm-dd].md` in the `/10-19_journals/11_legion` directory
- 	- Upload the base64 result to the markdown file, using the `createOrUpdateFile` Action
+3. **Create the journal file**
+	- Use `createOrUpdateFile` to create `[yyyy-mm-dd].md` in `/10-19_journals/11_legion`.  
+	- Use the **Base64-encoded journal text** from step **2**.  
+	- Upload this encoded content to the markdown file using the `createOrUpdateFile` Action.  
        
 4. **Prompt for Additional Sections:**
     
