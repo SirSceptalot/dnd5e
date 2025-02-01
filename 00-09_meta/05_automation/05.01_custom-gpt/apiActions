@@ -151,7 +151,7 @@ paths:
                 content:
                   type: string
                   format: byte
-                  description: Base64-encoded content of the file.
+                  description: Complete output from `base64.b64encode()` function.
                   example: "U29tZSB1cGRhdGVkIGNvbnRlbnQ="  # "Some updated content" encoded in Base64
                 sha:
                   type: string
