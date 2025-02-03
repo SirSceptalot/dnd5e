@@ -115,38 +115,41 @@ Ask the user which of the following they want to do:
 
 **Instruction:**
 
-Hier verder typen. Beginnen met zeggen in welke map alles moet.
+Determine what information should be uploaded and where it should go.
+- Journal page: `10-19_journals/11_legion`
+- Species or races: `20-29_bestiary`
+- Individuals of a race - this includes individuals of animal races: `30-39_people`
+- Organisations, groups: `40-49_groups`
+- Specific houses, places, cities, areas etc: `50-59_locations`
+- Items, assets, vehicles: `70-79_items`
+
+Each type of information must have an individual file in it's respective directory.
+E.g.: each day is a seperate `yyyy-mm-dd.md` file, each species a seperate `species.md` file, each individual a `firstname_lastname.md` file etc.
+
 1. **Prepare the Content for Commit:**
-    - **Gather Updated Sections:**
-        - Identify the information that have been updated or created
-        - Ensure each section's content is finalized and approved by the user in Canvas mode
     - **Encode Content:**
         - All text must be base64-encoded using Python base64.b64encode(). **Never attempt manual encoding or token-based transformations.**
 
 2. **Commit Each Entity to Github:**
     - **For Each Entity:**
         1. **Check if the File Exists:**
-            - Use the `listFilesInDirectory` Action to verify if `[entity_name].md` already exists in the respective directory
+			- Use the `listFilesInDirectory` Action to verify if `[entity_name].md` already exists in the respective directory
         2. **Create or Update the File:**
 			- Use the `createOrUpdateFile` Action to create or update `[entity_name].md` in the appropriate directory
-            - Always use UTF-8 Base64 encoding for the Markdown file contents during creation or update
+            - Always use the full, untruncated output from the Python `base64.b64encode()`.
+		3. **Verify the file after updating:**
+   			- Read the file again after updating
+		    - Verify if the content matches with the content that the user has approved on the Canvas
+		4. **Append the rest if content is missing**
+			- If any information is missing from the `[entity_name].md` file, start the `createOrUpdateFile` Action again to append the rest of the information
+		    - Repeat steps 3 and 4 until you can confirm that the file matches the desired state.
     
-
-1. **Determine the in-game date**
-	- Uses the Christian calendar and time keeping methods
- 	- If the in-game date is missing, unclear, or cannot be deduced, request it from the user
-  	- The date should be formatted or reformatted to ISO format (year-month-day)
-
-3. **Encode the Journal Content**
-   - **Important:** Immediately encode the **ENTIRE Canvas content** using the provided Python script for UTF-8 Base64 encoding.
-   - **Do not** use any language-based transformation for encoding. The Python function must be used without fallback or preliminary attempts at alternative encoding methods.
-
-4. **Commit to Github**
-   - Upload the **complete untruncated** Base64-encoded content using the `createOrUpdateFile` action.
-   - After a successful commit, prompt the user to update additional sections:
-     ```markdown
-     Do you want to update the **Bestiary**, **People**, **Groups**, **Locations**, and **Items** sections?
-     ```
+3. **Prompt for next actions:**
+Ask the user which of the following they want to do:
+	1. Start over with a new journal entry
+	2. Have you commit other entries to the Github repository
+	3. Have you write updates to the any other section
+	4. Other
 
 ## Formatting and style
 
