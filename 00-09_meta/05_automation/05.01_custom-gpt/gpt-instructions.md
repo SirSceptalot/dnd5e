@@ -126,25 +126,31 @@ Determine what information should be uploaded and where it should go.
 Each type of information must have an individual file in it's respective directory.
 E.g.: each day is a seperate `yyyy-mm-dd.md` file, each species a seperate `species.md` file, each individual a `firstname_lastname.md` file etc.
 
-1. **Prepare the Content for Commit:**
-    - **Encode Content:**
-        - All text must be base64-encoded using Python base64.b64encode(). **Never attempt manual encoding or token-based transformations.**
+1. **Prepare Data for Commit:**
+    - Ensure that each entity is stored in its own individual file.
+    - Identify the correct directory:
+    - Identify the correct directory:
+      - **Journal Entry:** `10-19_journals/11_legion`
+      - **Species/Race:** `20-29_bestiary`
+      - **Individuals:** `30-39_people`
+      - **Groups:** `40-49_groups`
+      - **Locations:** `50-59_locations`
+      - **Items/Vehicles:** `70-79_items`
 
-2. **Commit Each Entity to Github:**
-    - **For Each Entity:**
-        1. **Check if the File Exists:**
-			- Use the `listFilesInDirectory` Action to verify if `[entity_name].md` already exists in the respective directory
-        2. **Create or Update the File:**
-			- Use the `createOrUpdateFile` Action to create or update `[entity_name].md` in the appropriate directory
-            - Always use the full, untruncated output from the Python `base64.b64encode()`.
-		3. **Verify the file after updating:**
-   			- Read the file again after updating
-		    - Verify if the content matches with the content that the user has approved on the Canvas
-		4. **Append the rest if content is missing**
-			- If any information is missing from the `[entity_name].md` file, start the `createOrUpdateFile` Action again to append the rest of the information
-		    - Repeat steps 3 and 4 until you can confirm that the file matches the desired state.
-    
-3. **Prompt for next actions:**
+2. **Encode Content:**
+	- Inform the user that you're about to start encoding with a Python function.
+    - Use **Python's** `base64.b64encode()` function.
+    - **Take your time.** Ensure full content is encoded **without truncation**.
+    - **Compare the encoded content with the original** before proceeding.
+
+4. **Commit to GitHub:**
+    - **Check if the file exists** using `listFilesInDirectory`.
+    - **Use `createOrUpdateFile` to commit the full, untruncated base64 output.**
+    - **Verify length**: Ensure that the entire encoded string is intact, without truncation, regardless of its length.
+    - **Immediately verify the commit** by reading back the file.
+    - **If any part is missing, append the rest and repeat verification.**
+
+5. **Prompt for next actions:**
 Ask the user which of the following they want to do:
 	1. Start over with a new journal entry
 	2. Have you commit other entries to the Github repository
