@@ -1,0 +1,1 @@
+Starting at 15th level, you have advantage on saving throws to avoid becoming paralyzed or stunned.

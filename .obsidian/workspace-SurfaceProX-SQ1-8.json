@@ -1,0 +1,220 @@
+{
+  "main": {
+    "id": "c2557c1ea07ffb68",
+    "type": "split",
+    "children": [
+      {
+        "id": "53ae62e072836b15",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "60de5656a1ced05c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "10-19 Journals/11 Legion/0836-05-03.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "0836-05-03"
+            }
+          },
+          {
+            "id": "6b8771f395d2bbec",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "70-79 Items/Sending Stones.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Sending Stones"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4a9ec82c597db6de",
+    "type": "split",
+    "children": [
+      {
+        "id": "0fcf9f475a19c5ff",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8f740371112a94ea",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "7b19cb1ae7013615",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "byModifiedTime"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 326.5
+  },
+  "right": {
+    "id": "a7f646327b1cb05f",
+    "type": "split",
+    "children": [
+      {
+        "id": "10c634ff21ebff79",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7198cf3b0acdc494",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "70-79 Items/75 Weapons/Dreadblade.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Dreadblade"
+            }
+          },
+          {
+            "id": "f2214dacf42f9fd7",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "dfcc9a80ed007195",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
+          },
+          {
+            "id": "6b99ccd682dffa22",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "30-39 People/Kajetan.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Kajetan"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "obsidian-5e-statblocks:Open Creature pane": false,
+      "obsidian-leaflet-plugin:Open Leaflet Map": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "8f740371112a94ea",
+  "lastOpenFiles": [
+    "30-39 People/Legion.md",
+    "70-79 Items/71 Magic items/Shard of Divinity - War.md",
+    "00-09 Meta/01 Inbox/0836-05-06.md",
+    "70-79 Items/Sending Stones.md",
+    "00-09 Meta/01 Inbox/0836-05-05.md",
+    "00-09 Meta/01 Inbox/0836-05-04.md",
+    "10-19 Journals/11 Legion/0836-05-03.md",
+    "10-19 Journals/11 Legion/0836-05-02.md",
+    "30-39 People/Hadak.md",
+    "20-29 Bestiary/Pit Fiend.md",
+    "10-19 Journals/11 Legion/0835-07-31.md",
+    "30-39 People/Helmine.md",
+    "30-39 People/Kajetan.md",
+    "30-39 People/Emil.md",
+    "30-39 People/Waltraud.md",
+    "30-39 People/Tiziano.md",
+    "20-29 Bestiary/Gnoll.md",
+    "20-29 Bestiary/Peryton.md",
+    "30-39 People/Arinya.md",
+    "10-19 Journals/11 Legion/0836-04-27.md",
+    "10-19 Journals/11 Legion/0836-04-28.md",
+    "10-19 Journals/11 Legion/0836-04-29.md",
+    "10-19 Journals/11 Legion/0836-04-30.md",
+    "10-19 Journals/11 Legion/0836-05-01.md",
+    "70-79 Items/Blood Potion.md",
+    "00-09 Meta/01 Inbox/Fiend Blood Potion.md",
+    "Sheogorath.webp",
+    "Enes Mornshield.webp",
+    "00-09 Meta/02 Media/Lauden Brasheer.jpeg",
+    "00-09 Meta/02 Media/Transport Unit.webp",
+    "00-09 Meta/02 Media/Spectre logo.png",
+    "Pasted image 20241215124452.png",
+    "00-09 Meta/02 Media/Paragon logo.png",
+    "10-19 Journals/11 Legion-merged.txt",
+    "00-09 Meta/02 Media/Verras.jpeg",
+    "00-09 Meta/02 Media/Ecbert Dhaelus.jpeg",
+    "00-09 Meta/02 Media/Pax au Telemanus hit dice.gif",
+    "00-09 Meta/03 Templates/Untitled",
+    "Untitled.canvas",
+    "90-99 Spells/99 Level 9/Necromancy",
+    "90-99 Spells/99 Level 9/Illusion",
+    "90-99 Spells/99 Level 9/Evocation",
+    "90-99 Spells/99 Level 9/Enchantment",
+    "90-99 Spells/99 Level 9/Divination",
+    "90-99 Spells/99 Level 9/Conjuration",
+    "90-99 Spells/99 Level 9/Abjuration",
+    "90-99 Spells/99 Level 9/Transmutation"
+  ]
+}

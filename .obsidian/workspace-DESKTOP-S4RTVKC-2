@@ -1,0 +1,145 @@
+{
+  "main": {
+    "id": "cb3a7758f16bfea9",
+    "type": "split",
+    "children": [
+      {
+        "id": "200bcc507d365567",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "10 Journal/0836-01-22.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "647ef3141a3613ec",
+    "type": "split",
+    "children": [
+      {
+        "id": "30793cd12e6c25db",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c88e82ce19bfb221",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "a6a555fc79994d95",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "cheese",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 367
+  },
+  "right": {
+    "id": "47d3f17b094d7a6d",
+    "type": "split",
+    "children": [
+      {
+        "id": "a5f437f8856ec6bf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ca2c9590b99c8c72",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "10 Journal/0836-01-22.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2262f6749460a19e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false
+              }
+            }
+          },
+          {
+            "id": "bda5d3c636746aec",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "33acf45846ee444a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "9857b659d2d41b0f",
+            "type": "leaf",
+            "state": {
+              "type": "breadcrumbs-stats",
+              "state": {}
+            }
+          },
+          {
+            "id": "ac4d5d29ee2b9b3d",
+            "type": "leaf",
+            "state": {
+              "type": "breadcrumbs-matrix",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "200bcc507d365567",
+  "lastOpenFiles": [
+    "10 Journal/0836-01-22.md",
+    "10 Journal/0836-01-23.md",
+    "10 Journal/0836-01-24.md",
+    "60 Documents/Helmine's notes.md",
+    "10 Journal/0836-01-25.md",
+    "10 Journal/Faynaigen.md",
+    "80 Tasks/Horace Ringmann's job.md",
+    "10 Journal/Eladrin.md",
+    "30 Characters/Tiziano.md",
+    "10 Journal/Dancing Hut.md"
+  ]
+}

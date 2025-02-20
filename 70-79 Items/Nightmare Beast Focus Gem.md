@@ -1,0 +1,1 @@
+Magical focus gem taken from a slain beast in the [[Eternal Forest]]

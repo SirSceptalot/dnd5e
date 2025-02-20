@@ -1,0 +1,1 @@
+1d4 regular dmg, and 1d4 necrotic dmg that heals you (in melee). If you throw it, it also does the 2x 1d4 damage but it doesn't heal you.

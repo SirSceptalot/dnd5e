@@ -1,0 +1,303 @@
+{
+  "mapMarkers": [
+    {
+      "id": "Amaroth-thetowers",
+      "lastAccessed": 1636627755555,
+      "markers": [],
+      "overlays": [],
+      "shapes": [
+        {
+          "type": "polygon",
+          "color": "#3388FF",
+          "vertices": [
+            {
+              "lat": -7.19903564453125,
+              "lng": 4.033203125,
+              "id": "ID_f8491a29cb79",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -7.00177001953125,
+              "lng": 4.185546875,
+              "id": "ID_3b89eacb0809",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -6.66387939453125,
+              "lng": 4.115234375,
+              "id": "ID_3adae8ab5809",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -6.45587158203125,
+              "lng": 4.4072265625,
+              "id": "ID_b8395a1b7b7a",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -6.25665283203125,
+              "lng": 4.4150390625,
+              "id": "ID_b8a9fac9fb3a",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -6.05841064453125,
+              "lng": 4.67578125,
+              "id": "ID_49ba7b7b0988",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -5.80255126953125,
+              "lng": 4.833984375,
+              "id": "ID_9ab96ae8681b",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -5.55157470703125,
+              "lng": 4.736328125,
+              "id": "ID_4bb8ba499a19",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -5.43438720703125,
+              "lng": 4.744140625,
+              "id": "ID_bb08e82b29cb",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -5.34844970703125,
+              "lng": 4.86328125,
+              "id": "ID_49eb3a29ca49",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -5.05059814453125,
+              "lng": 4.8857421875,
+              "id": "ID_4b0bea4aeae9",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -4.92364501953125,
+              "lng": 4.6533203125,
+              "id": "ID_5ab88918d8fa",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -5.22247314453125,
+              "lng": 4.4560546875,
+              "id": "ID_e95be82ae8f8",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -5.10919189453125,
+              "lng": 4.1416015625,
+              "id": "ID_cac9ca49181a",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -5.29473876953125,
+              "lng": 4.0927734375,
+              "id": "ID_0a4b59aa395a",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -5.31036376953125,
+              "lng": 3.8837890625,
+              "id": "ID_ebbb9829baab",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -5.22442626953125,
+              "lng": 3.7373046875,
+              "id": "ID_7b6ab9580b1b",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -5.30255126953125,
+              "lng": 3.58203125,
+              "id": "ID_08b9187a2beb",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -5.17559814453125,
+              "lng": 3.298828125,
+              "id": "ID_c91919f8c978",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -4.73614501953125,
+              "lng": 3.244140625,
+              "id": "ID_78da2b795b5a",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -4.75762939453125,
+              "lng": 2.919921875,
+              "id": "ID_5b5ac86a7b48",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -4.92950439453125,
+              "lng": 2.818359375,
+              "id": "ID_4b19ba698908",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -6.06329345703125,
+              "lng": 2.9755859375,
+              "id": "ID_d97b3b286ba9",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -6.35626220703125,
+              "lng": 2.9189453125,
+              "id": "ID_baca5acaf99b",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -6.70001220703125,
+              "lng": 3.1953125,
+              "id": "ID_69298ac8882a",
+              "targets": {
+                "vertexIds": []
+              }
+            },
+            {
+              "lat": -7.32696533203125,
+              "lng": 3.578125,
+              "id": "ID_da3b0aabfb8b",
+              "targets": {
+                "vertexIds": []
+              }
+            }
+          ]
+        }
+      ],
+      "files": [
+        "50 Locations/The Towers.md"
+      ]
+    }
+  ],
+  "defaultMarker": {
+    "type": "default",
+    "iconName": "map-marker",
+    "color": "#0127b2",
+    "transform": {
+      "size": 6,
+      "x": 0,
+      "y": -2
+    }
+  },
+  "markerIcons": [],
+  "color": "#dddddd",
+  "lat": 39.983334,
+  "long": -82.98333,
+  "notePreview": false,
+  "layerMarkers": true,
+  "previousVersion": "6.0.5",
+  "version": {
+    "major": 6,
+    "minor": 0,
+    "patch": 5
+  },
+  "warnedAboutMapMarker": false,
+  "copyOnClick": false,
+  "displayMarkerTooltips": "hover",
+  "displayOverlayTooltips": true,
+  "configDirectory": null,
+  "mapViewEnabled": true,
+  "mapViewParameters": {
+    "darkMode": "false",
+    "defaultZoom": 7.5,
+    "distanceMultiplier": 1,
+    "drawColor": "#3388ff",
+    "geojson": [],
+    "geojsonColor": "#3388ff",
+    "gpx": [],
+    "gpxColor": "#3388ff",
+    "height": "500px",
+    "image": "[[Amaroth.png]]",
+    "imageOverlay": [],
+    "isMapView": false,
+    "layers": [
+      "[[Amaroth.png]]"
+    ],
+    "linksFrom": [],
+    "linksTo": [],
+    "marker": [],
+    "commandMarker": [],
+    "markerFile": [],
+    "markerFolder": [],
+    "markerTag": [],
+    "maxZoom": 10,
+    "minZoom": 6,
+    "osmLayer": true,
+    "overlay": [],
+    "overlayColor": "blue",
+    "scale": 297,
+    "showAllMarkers": false,
+    "tileServer": [],
+    "verbose": false,
+    "zoomDelta": 0.5,
+    "zoomFeatures": false,
+    "id": "Amaroth-thetowers",
+    "lat": 67.5,
+    "long": 60,
+    "unit": "meter",
+    "filterTag": []
+  },
+  "enableDraw": true,
+  "defaultUnitType": "metric",
+  "defaultTile": "https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png",
+  "defaultTileDark": "https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png",
+  "defaultAttribution": "Map tiles by <a href=\"http://stamen.com\">Stamen Design</a>, under <a href=\"http://creativecommons.org/licenses/by/3.0\">CC BY 3.0</a>. Data by <a href=\"http://openstreetmap.org\">OpenStreetMap</a>, under <a href=\"http://www.openstreetmap.org/copyright\">ODbL</a>.",
+  "defaultTileSubdomains": "a,b,c"
+}

@@ -1,0 +1,18 @@
+{
+  "alwaysUpdateLinks": true,
+  "spellcheck": true,
+  "spellcheckDictionary": [
+    "Tortle",
+    "Arinya",
+    "Tiziano",
+    "Peryton",
+    "Helmine",
+    "archmages",
+    "adamantine"
+  ],
+  "promptDelete": false,
+  "showFrontmatter": false,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "10 Journal",
+  "readableLineLength": true
+}

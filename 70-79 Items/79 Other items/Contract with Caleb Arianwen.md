@@ -1,0 +1,1 @@
+Contract which entitles us to 5% of the profit made by [[Caleb Arianwen]] in sales of Storm Giant whiskey, as negotiated in the mission [[Expedition to StormMaw Tribe]].

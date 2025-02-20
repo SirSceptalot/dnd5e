@@ -1,0 +1,1 @@
+The [[Lady of the Woods]] convinces [[Arinya]] on [[0835-08-02]] to take this item with her on her quest for the [[Mortar and Pestle]].

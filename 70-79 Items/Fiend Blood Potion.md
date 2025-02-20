@@ -1,0 +1,1 @@
+All your melee attacks do an extra 1d6 melee damage for the next hour.

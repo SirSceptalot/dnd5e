@@ -1,0 +1,35 @@
+{
+  "alwaysUpdateLinks": true,
+  "spellcheck": true,
+  "spellcheckDictionary": [
+    "Tortle",
+    "Arinya",
+    "Tiziano",
+    "Peryton",
+    "Helmine",
+    "archmages",
+    "adamantine",
+    "axe",
+    "Aquan",
+    "owlbear",
+    "undead",
+    "attunement",
+    "Archmage"
+  ],
+  "promptDelete": false,
+  "showFrontmatter": false,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "00-09 Meta/01 Inbox",
+  "readableLineLength": true,
+  "livePreview": false,
+  "spellcheckLanguages": null,
+  "propertiesInDocument": "hidden",
+  "pdfExportSettings": {
+    "includeName": false,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "showInlineTitle": false
+}
