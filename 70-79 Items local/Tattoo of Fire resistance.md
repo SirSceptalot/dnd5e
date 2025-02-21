@@ -1,1 +1,0 @@
-**Damage Resistance.** While the tattoo is on your skin, you have resistance to fire damage.

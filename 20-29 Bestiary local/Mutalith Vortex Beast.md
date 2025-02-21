@@ -1,1 +1,0 @@
-A creature formed by wild aracana, possibly as a result of teleportation gone bad.

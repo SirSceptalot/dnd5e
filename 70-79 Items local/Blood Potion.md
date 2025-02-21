@@ -1,1 +1,0 @@
-1d4 regeneration per round, for three rounds

@@ -1,5 +1,0 @@
----
-Aliases:
----
-
-[[God's Wrath]]

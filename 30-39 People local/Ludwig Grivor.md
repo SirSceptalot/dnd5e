@@ -1,1 +1,0 @@
-Ziet er late 40 uit, maar is een vampier dus wsl honderden jaren oud.

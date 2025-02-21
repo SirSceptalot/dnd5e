@@ -1,1 +1,0 @@
-Magical gems that we collected in the [[Workshop]]. They were used to open the portals between the chambers.
